@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+  --bg-dark: #0B0B0B;
+  --gold: #E7C95E;
+  --text-light: #F5F5F5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-dark);
+  font-family: 'Inter', sans-serif;
+  color: var(--text-light);
+}
+
+/* HEADER */
+.headerContent {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 5%;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.4);
+  z-index: 1000;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("./assets/imagen6.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+}
+
+.hero p {
+  margin: 20px 0;
+}
+
+/* BUTTON */
+.btn-gold {
+  padding: 14px 40px;
+  border-radius: 40px;
+  border: 2px solid var(--gold);
+  background: var(--gold);
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-gold:hover {
+  background: transparent;
+  color: var(--gold);
+}
+
+/* AWARDS */
+.sectionOfAward {
+  padding: 120px 5%;
+  text-align: center;
+}
+
+.contentAward {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.awardCard {
+  background: #1A1A1A;
+  padding: 40px;
+  border-radius: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+.awardCard span {
+  font-size: 40px;
+  color: var(--gold);
+}
+
+/* PROMOTION */
+.sectionOfPromotion {
+  padding: 120px 5%;
+  text-align: center;
+}
+
+.gallery-carousel {
+  overflow: hidden;
+  margin: 40px 0;
+}
+
+.track {
+  display: flex;
+  gap: 20px;
+  animation: scroll 30s linear infinite;
+}
+
+.track img {
+  width: 300px;
+  height: 400px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* SHOWS */
+.sectionOfShows {
+  padding: 120px 5%;
+  text-align: center;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.cardPrincipal,
+.cardSecondary {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.cardPrincipal img {
+  width: 100%;
+  min-height: 450px;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.cardsSeconds {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cardSecondary img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.cardPrincipal:hover img,
+.cardSecondary:hover img {
+  transform: scale(1.05);
+}
+
+.card-overlay,
+.card-overlay-small {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+/* FOOTER */
+.footer {
+  padding: 40px;
+  text-align: center;
+  background: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+/* TESTIMONIALS */
+.sectionTestimonials {
+  padding: 120px 5%;
+  background: #111;
+  text-align: center;
+}
+
+.sectionTestimonials h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.testimonialCard {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.08);
+}
+
+.stars {
+  color: var(--gold);
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.testimonialText {
+  font-style: italic;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.testimonialName {
+  font-weight: 500;
+}
+/* FOOTER */
+.footer {
+  background: #000;
+  padding: 80px 5% 40px;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footerColumn h3,
+.footerColumn h4 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+}
+
+.footerColumn ul {
+  list-style: none;
+}
+
+.footerColumn ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footerColumn ul li:hover {
+  color: var(--gold);
+}
+
+.socialIcons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+@media (max-width: 992px) {
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+}
