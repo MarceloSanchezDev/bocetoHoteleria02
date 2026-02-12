@@ -1,12 +1,20 @@
 import './App.css'
-import img1 from './assets/imagen7.jpg'
-import img2 from './assets/imagen7.jpg'
-import img3 from './assets/imagen7.jpg'
-import img4 from './assets/imagen7.jpg'
-import img5 from './assets/imagen7.jpg'
+import img1 from './assets/imagen12.jpg'
+import img2 from './assets/imagen13.jpg'
+import img3 from './assets/imagen14.jpg'
+import img4 from './assets/imagen15.jpg'
+import img5 from './assets/imagen16.jpg'
 import img6 from './assets/imagen6.jpg'
 import img7 from './assets/imagen8.jpg'
 import img8 from './assets/imagen9.jpg'
+import img10 from './assets/imagen10.jpg'
+import img11 from './assets/imagen11.jpg'
+import img12 from './assets/imagen18.jpg'
+import img13 from './assets/imagen19.jpg'
+
+
+
+
 
 function App() {
 
@@ -85,7 +93,7 @@ function App() {
           </div>
 
           <div className="cardsSeconds">
-            {[img8,img8,img8].map((img,i)=>(
+            {[img8,img11,img10,img12,img13].map((img,i)=>(
               <div className="cardSecondary" key={i}>
                 <img src={img} alt="Show" />
                 <div className="card-overlay-small">
