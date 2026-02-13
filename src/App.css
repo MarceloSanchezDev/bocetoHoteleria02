@@ -25,7 +25,7 @@ body {
   width: 100%;
   padding: 20px 5%;
   backdrop-filter: blur(10px);
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1000;
 }
 
@@ -61,7 +61,7 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
 }
 
 .hero-content {
@@ -147,8 +147,13 @@ body {
 }
 
 @keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* SHOWS */
@@ -169,7 +174,7 @@ body {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
 .cardPrincipal img {
@@ -203,7 +208,7 @@ body {
   bottom: 0;
   padding: 20px;
   width: 100%;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
 }
 
 /* FOOTER */
@@ -219,6 +224,23 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .contentAward {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+  }
+.track {
+  display: flex;
+  gap: 20px;
+  animation: scroll 40s linear infinite;
+}
+.gallery-carousel:hover .track {
+  animation-duration: 15s;
+}
+
   .navLinks {
     display: none;
   }
@@ -227,6 +249,7 @@ body {
     font-size: 2.5rem;
   }
 }
+
 /* TESTIMONIALS */
 .sectionTestimonials {
   padding: 120px 5%;
@@ -247,7 +270,7 @@ body {
 }
 
 .testimonialCard {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   padding: 40px;
   border-radius: 20px;
@@ -256,7 +279,7 @@ body {
 
 .testimonialCard:hover {
   transform: translateY(-10px);
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .stars {
@@ -274,6 +297,7 @@ body {
 .testimonialName {
   font-weight: 500;
 }
+
 /* FOOTER */
 .footer {
   background: #000;
@@ -314,12 +338,13 @@ body {
 }
 
 .footerBottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 20px;
   text-align: center;
   font-size: 0.9rem;
   color: #aaa;
 }
+
 @media (max-width: 992px) {
   .testimonialsGrid {
     grid-template-columns: 1fr;
